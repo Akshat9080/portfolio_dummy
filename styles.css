@@ -1,0 +1,666 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+#wrapper{
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#container{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.logo{
+  width: 80px;
+}
+
+.logo-container{
+  display: flex;
+  align-items: center;
+}
+
+.logo-text{
+  margin-left: -1.2rem;
+  font-size: 28px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  user-select: none;
+} 
+
+.nav-items{
+  display: flex;
+  gap: 2rem;
+  padding: 0 4em;
+}
+
+.nav-items div{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nav-items a{
+  text-decoration: none;
+  color: black;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.nav-items div a:hover{
+  font-weight: bold;
+}
+
+.hero-section{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  padding-bottom: 8rem;
+}
+
+.faded-text{
+  user-select: none;
+  font-size: 7rem;
+  color: rgb(231,231,231);
+  font-family: 'Be Vietnam Pro', sans-serif;
+
+  bottom: -16%;
+  left: -5%;
+  font-weight: bold;
+  transition: all 3s;
+
+}
+
+.hero-section-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hero-section-heading{
+  font-size: 35px;
+  color: #343d68;
+  font-weight: 500;
+}
+
+.role{
+  color: #4e45d5;
+  font-weight: 800;
+}
+
+.hero-section-subheading{
+  font-size: 45px;
+  line-height:45px;
+}
+
+.hero-section-desc{
+  margin-top: 1rem;
+  width: 70%;
+  font-weight: 500;
+}
+
+.button{
+  width: 18%;
+  padding: 10px 10px;
+  background-color:#e84949;
+  color: white;
+  font-size: 18px;
+  box-shadow: 5px 5px 7px 0px #0000003f ;
+  position: relative;
+  z-index: 1; 
+} 
+
+.button::before{
+  content: "";
+  background-color: white;
+  border: 3px solid #e84949;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin:left;
+  transition: all 0.6s;
+  z-index: -1;
+}
+
+.button:hover{
+  cursor: pointer;
+  color: black;
+}
+
+.button:hover::before{
+  transform: scaleX(1);
+}
+
+.hero-section-right{
+  position: relative;
+}
+
+.absolute{
+  position: absolute;
+}
+
+.user-image{
+  padding: 2.5rem;
+  filter:grayscale(1);
+  transition: all 1s;
+  animation: scaleImage 5s linear infinite;
+}
+
+.user-image img{
+  z-index: -9;
+}
+
+ @keyframes scaleImage{
+   0%{
+    filter: grayscale(1);
+    transform: scale(1);
+    
+   }
+
+   50%{
+    transform: scale(1.1);
+    filter: grayscale(0);
+    box-shadow: 3px 3px 10px black;
+    
+   }
+
+   100%{
+    transform: scale(1);
+    filter: grayscale(1);
+    
+   }
+} 
+
+.icon-dots{
+  z-index: 9;
+  bottom: -2rem;
+  right: 0;
+  animation-name: dot;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dot{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-15px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+.icon-cube{
+  z-index: 9;
+  right: 0;
+  top: -1rem;
+  animation-name: cube;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cube{
+  0%{
+    transform:rotateY(0deg) translateY(0px);
+  }
+  50%{
+    transform:rotateY(180deg) translateY(-15px);
+  }
+  100%{
+    transform:rotateY(360deg) translateY(0px);
+  }
+}
+
+.icon-circle{
+  z-index: 9;
+  bottom: -2rem;
+  left: 0;
+  animation-name: circle;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes circle {
+
+  0%{
+    transform: translateZ(0);
+  }
+  50%{
+    transform: translate(2.1rem, -2rem);
+  }
+  100%{
+    transform: translate(0);
+  }
+
+}
+
+.icon-zigzag{
+  z-index: 9;
+  animation-name: zigzag;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes zigzag {
+
+  0%{
+    transform: translateZ(0);
+  }
+  50%{
+    transform: translate(1rem, -2rem);
+  }
+  100%{
+    transform: translate(0);
+  }
+
+}
+
+.icon-plus{
+  z-index: 9;
+  right: 11rem;
+  top: -1rem;
+  animation-name:plus;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes plus {
+
+  0%{
+    transform: translateZ(0);
+  }
+  50%{
+    transform: translate(1rem, -2rem);
+  }
+  100%{
+    transform: translate(0);
+  }
+
+}
+
+.project-section{
+  background-color: rgb(231, 231, 231);
+  margin-top: 4rem;
+}
+
+.project-header{
+  color: #e84949;
+  font-size: 90px;
+  text-align: center;
+  padding-top: 30px;
+  font-weight: bold;
+}
+
+.projects-cards{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.card{
+  width: 90%;
+  height: 550px;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0px 0px 40px #1f1f1f;
+}
+
+.card::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #1f1f1f9a;
+  transform: scaleX(1);
+  z-index: 0;
+}
+
+.card::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background:linear-gradient(45deg,#343d68,#343d68be,#343d687c);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.4s;
+  z-index: 1;
+}
+
+.project-number{
+  position: absolute;
+  font-size: 200px;
+  color: white;
+  font-weight: bold;
+  z-index: 10;
+  display: none;
+  transition: all 0.5s;
+}
+
+.card:hover .project-number{
+  display: block;
+}
+
+.card:hover .project-content{
+  transform: scale(1.1);
+}
+
+.left{
+  right: -40px;
+  top: -45px;
+}
+
+.right{
+  left: -40px;
+  top: -45px;
+}
+
+
+.card:hover::before{
+  transform: scaleX(1);
+}
+
+.project-content{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 2rem;
+  bottom: 20%;
+  gap: 1em;
+  z-index: 5;
+  transition: all 0.4s;
+}
+
+.project-content-left{
+ left:10%;
+}
+
+.project-content-right{
+  left: 45%;
+}
+
+.project-skill{
+  width: 40px;
+}
+
+.project-skills-container{
+  width: 60%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.project-heading{
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.project-subheading{
+  width: 75%;
+  font-style: italic;
+}
+
+.icons-container{
+  width: 80%;
+  display: flex;
+  gap: 10px;
+}
+
+#btn{
+  width: 30%;
+  text-align: center;
+}
+
+.icon{
+  font-size: 38px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.icon:hover{
+  color: #e84949;
+}
+
+
+#project1{
+  background-image: url(./images/projects/Project1.png);
+  
+}
+
+#project2{
+  background-image: url(./images/projects/Project2.png);
+  left: 10%;
+}
+
+#project3{
+  background-image: url(./images/projects/Project3.png);
+}
+
+#project4{
+  background-image: url(./images/projects/Project4.png);
+  left: 10%;
+}
+
+.skills-section{
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 15%;
+  display: flex;
+  gap: 5rem;
+}
+
+.skills-section-left{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.skills-section-heading{
+  font-size: 55px;
+  color: #e84949;
+  font-weight: 800;
+  line-height: 60px;
+}
+
+.skills-section-para{
+  margin-top:20px;
+}
+
+.letter{
+  font-size: 84px;
+}
+
+.skills-section-right{
+  width: 55%;
+  position: relative;
+}
+
+.bg-blob img{
+  position: relative;
+  top: 5rem;
+  left: 7rem;
+  animation-name: blob;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes blob {
+
+  0%{
+    transform: translateZ(0);
+  }
+  50%{
+    transform: translate(2.1rem, -2rem);
+  }
+  100%{
+    transform: translate(0);
+  }
+
+}
+
+
+.img-container{
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  top: -10px;
+}
+
+.skill-img{
+  width: 95px;
+  transition: all 0.3s; 
+}
+
+.skill-img:hover{
+  transform: scale(1.2);
+}
+
+.faded-text2{
+  font-size: 15em;
+  user-select: none;
+  font-weight: bold;
+  color: rgb(231,231,231);
+  font-family: 'Be Vietnam Pro', sans-serif;
+  position: relative;
+  top: 10%;
+  left:75%;
+}
+
+.contact-me-section{
+  background-color: rgb(231, 231, 231);
+}
+
+.contact-me-section2{
+width: 1200px;
+margin: 0 auto;
+padding-top: 3%;
+display: flex;
+flex-direction: column;
+padding-bottom: 3%;
+}
+
+.contact-me-heading{
+  color: #e84949;
+  font-size: 80px;
+  font-weight: 800;
+}
+
+.contact-me-subheading{
+  font-size: 50px;
+  font-weight: 600;
+  color: #495b92c3;
+}
+
+.contact-me-form{
+  width: 80%;
+  position: relative;
+  left: 15%;
+  margin-top: 5%;
+}
+
+.formfield-container{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.formfield{
+  width: 100%;
+  height: 42px;
+  padding: 0 2rem;
+  font-size:18px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #1f1f1f;
+  font-weight: 500;
+  border: none;
+}
+
+.formfield-textarea{
+  height: auto;
+  padding: 1rem;
+}
+
+#submit-btn{
+  border: none;
+  font-size: 1.4rem;
+  margin: 1rem 0;
+  transition: all 0.3s;
+  width: 16rem;
+}
+
+#submit-btn:hover{
+  scale: 0.9;
+}
+
+.submit-icon{
+  padding: 0 1rem;
+  font-size: 1.5rem;
+}
+
+.footer-section{
+  background-color: #343d68;
+  padding-top: 5%;
+}
+
+.footer-section-content{
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-section-left{
+  display: flex;
+  gap: 10px;
+}
+
+.footer-section-left a{
+  text-decoration: none;
+  color: white;
+}
+
+.footer-section-right{
+  color: white;
+  font-size: 37px;
+  display: flex;
+  gap: 15px;
+}
+
+.title-name{
+  font-size: 110px;
+  color: #535c87;
+}
+
